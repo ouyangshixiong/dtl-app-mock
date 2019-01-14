@@ -1,0 +1,30 @@
+{
+    "dtlAppMockApp": {
+        "enterpriseInfo": {
+            "home": {
+                "title": "Enterprise Infos",
+                "createLabel": "创建新 Enterprise Info",
+                "createOrEditLabel": "创建或编辑 Enterprise Info"
+            },
+            "created": "Enterprise Info {{ param }} 创建成功",
+            "updated": "Enterprise Info {{ param }} 更新成功",
+            "deleted": "Enterprise Info {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Enterprise Info {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Enterprise Info"
+            },
+            "userId": "User Id",
+            "name": "Name",
+            "legalPersonName": "Legal Person Name",
+            "legalPersonIdCardNum": "Legal Person Id Card Num",
+            "legalPersonMobile": "Legal Person Mobile",
+            "enterpriseTel": "Enterprise Tel",
+            "businessLicenseImgId": "Business License Img Id",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

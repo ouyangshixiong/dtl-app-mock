@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="recommendRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.recommendRecord.detail.title">Recommend Record</span> {{recommendRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.recommendRecord.recUserId">Rec User Id</span></dt>
+                <dd>
+                    <span>{{recommendRecord.recUserId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.recommendRecord.userId">User Id</span></dt>
+                <dd>
+                    <span>{{recommendRecord.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.recommendRecord.status">Status</span></dt>
+                <dd>
+                    <span>{{recommendRecord.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.recommendRecord.identityFlag">Identity Flag</span></dt>
+                <dd>
+                    <span>{{recommendRecord.identityFlag}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.recommendRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{recommendRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.recommendRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{recommendRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/recommend-record', recommendRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

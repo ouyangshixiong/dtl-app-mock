@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-staff-heading" jhiTranslate="dtlAppMockApp.staff.home.createOrEditLabel">Create or edit a Staff</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!staff.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="staff.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.staff.staffName" for="field_staffName">Staff Name</label>
+                    <input type="text" class="form-control" name="staffName" id="field_staffName"
+                        [(ngModel)]="staff.staffName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.staff.password" for="field_password">Password</label>
+                    <input type="text" class="form-control" name="password" id="field_password"
+                        [(ngModel)]="staff.password" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.staff.realName" for="field_realName">Real Name</label>
+                    <input type="text" class="form-control" name="realName" id="field_realName"
+                        [(ngModel)]="staff.realName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.staff.status" for="field_status">Status</label>
+                    <input type="number" class="form-control" name="status" id="field_status"
+                        [(ngModel)]="staff.status" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.staff.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="createTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.staff.lastModifyTime" for="field_lastModifyTime">Last Modify Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastModifyTime" type="datetime-local" class="form-control" name="lastModifyTime" [(ngModel)]="lastModifyTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

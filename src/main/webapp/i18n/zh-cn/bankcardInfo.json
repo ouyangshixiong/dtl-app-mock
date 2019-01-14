@@ -1,0 +1,28 @@
+{
+    "dtlAppMockApp": {
+        "bankcardInfo": {
+            "home": {
+                "title": "Bankcard Infos",
+                "createLabel": "创建新 Bankcard Info",
+                "createOrEditLabel": "创建或编辑 Bankcard Info"
+            },
+            "created": "Bankcard Info {{ param }} 创建成功",
+            "updated": "Bankcard Info {{ param }} 更新成功",
+            "deleted": "Bankcard Info {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Bankcard Info {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Bankcard Info"
+            },
+            "userId": "User Id",
+            "bankName": "Bank Name",
+            "bankAccountName": "Bank Account Name",
+            "bankCardNum": "Bank Card Num",
+            "bankCardImgId": "Bank Card Img Id",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

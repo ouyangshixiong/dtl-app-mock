@@ -1,0 +1,26 @@
+{
+    "dtlAppMockApp": {
+        "userLevel": {
+            "home": {
+                "title": "User Levels",
+                "createLabel": "创建新 User Level",
+                "createOrEditLabel": "创建或编辑 User Level"
+            },
+            "created": "User Level {{ param }} 创建成功",
+            "updated": "User Level {{ param }} 更新成功",
+            "deleted": "User Level {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 User Level {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "User Level"
+            },
+            "name": "Name",
+            "integralRule": "Integral Rule",
+            "userIdentity": "User Identity",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

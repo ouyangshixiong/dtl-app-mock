@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="store">
+            <h2><span jhiTranslate="dtlAppMockApp.store.detail.title">Store</span> {{store.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.store.name">Name</span></dt>
+                <dd>
+                    <span>{{store.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.storeType">Store Type</span></dt>
+                <dd>
+                    <span>{{store.storeType}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.address">Address</span></dt>
+                <dd>
+                    <span>{{store.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.area">Area</span></dt>
+                <dd>
+                    <span>{{store.area}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.linkman">Linkman</span></dt>
+                <dd>
+                    <span>{{store.linkman}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.tel">Tel</span></dt>
+                <dd>
+                    <span>{{store.tel}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.status">Status</span></dt>
+                <dd>
+                    <span>{{store.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{store.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.store.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{store.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/store', store.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

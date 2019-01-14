@@ -1,0 +1,60 @@
+{
+    "name": "RealnameAuthRecord",
+    "fields": [
+        {
+            "fieldName": "txnId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "realName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idCardNum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idCardImgA",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "idCardImgB",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "authStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "auditOpinion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditStaffName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065238",
+    "javadoc": "实名认证记录表",
+    "entityTableName": "realname_auth_record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

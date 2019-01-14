@@ -1,0 +1,32 @@
+{
+    "dtlAppMockApp": {
+        "storeAuthRecord": {
+            "home": {
+                "title": "Store Auth Records",
+                "createLabel": "创建新 Store Auth Record",
+                "createOrEditLabel": "创建或编辑 Store Auth Record"
+            },
+            "created": "Store Auth Record {{ param }} 创建成功",
+            "updated": "Store Auth Record {{ param }} 更新成功",
+            "deleted": "Store Auth Record {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Store Auth Record {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Store Auth Record"
+            },
+            "txnId": "Txn Id",
+            "name": "Name",
+            "storeType": "Store Type",
+            "address": "Address",
+            "area": "Area",
+            "linkman": "Linkman",
+            "tel": "Tel",
+            "authStatus": "Auth Status",
+            "auditOpinion": "Audit Opinion",
+            "auditStaffName": "Audit Staff Name",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

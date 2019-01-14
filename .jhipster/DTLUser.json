@@ -1,0 +1,60 @@
+{
+    "name": "DTLUser",
+    "fields": [
+        {
+            "fieldName": "userRoleId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "account",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "userType",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "userIdentity",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "source",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ipAddr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastLoginTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065229",
+    "javadoc": "用户信息表",
+    "entityTableName": "dtl_user",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

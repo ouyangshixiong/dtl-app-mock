@@ -1,0 +1,93 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-enterprise-auth-record-heading" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.home.createOrEditLabel">Create or edit a Enterprise Auth Record</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!enterpriseAuthRecord.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="enterpriseAuthRecord.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.txnId" for="field_txnId">Txn Id</label>
+                    <input type="text" class="form-control" name="txnId" id="field_txnId"
+                        [(ngModel)]="enterpriseAuthRecord.txnId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.userId" for="field_userId">User Id</label>
+                    <input type="number" class="form-control" name="userId" id="field_userId"
+                        [(ngModel)]="enterpriseAuthRecord.userId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="enterpriseAuthRecord.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonName" for="field_legalPersonName">Legal Person Name</label>
+                    <input type="text" class="form-control" name="legalPersonName" id="field_legalPersonName"
+                        [(ngModel)]="enterpriseAuthRecord.legalPersonName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonIdCardNum" for="field_legalPersonIdCardNum">Legal Person Id Card Num</label>
+                    <input type="text" class="form-control" name="legalPersonIdCardNum" id="field_legalPersonIdCardNum"
+                        [(ngModel)]="enterpriseAuthRecord.legalPersonIdCardNum" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonMobile" for="field_legalPersonMobile">Legal Person Mobile</label>
+                    <input type="text" class="form-control" name="legalPersonMobile" id="field_legalPersonMobile"
+                        [(ngModel)]="enterpriseAuthRecord.legalPersonMobile" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.enterpriseTel" for="field_enterpriseTel">Enterprise Tel</label>
+                    <input type="text" class="form-control" name="enterpriseTel" id="field_enterpriseTel"
+                        [(ngModel)]="enterpriseAuthRecord.enterpriseTel" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.businessLicenseImgId" for="field_businessLicenseImgId">Business License Img Id</label>
+                    <input type="number" class="form-control" name="businessLicenseImgId" id="field_businessLicenseImgId"
+                        [(ngModel)]="enterpriseAuthRecord.businessLicenseImgId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.authStatus" for="field_authStatus">Auth Status</label>
+                    <input type="number" class="form-control" name="authStatus" id="field_authStatus"
+                        [(ngModel)]="enterpriseAuthRecord.authStatus" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.auditOpinion" for="field_auditOpinion">Audit Opinion</label>
+                    <input type="text" class="form-control" name="auditOpinion" id="field_auditOpinion"
+                        [(ngModel)]="enterpriseAuthRecord.auditOpinion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.auditStaffName" for="field_auditStaffName">Audit Staff Name</label>
+                    <input type="text" class="form-control" name="auditStaffName" id="field_auditStaffName"
+                        [(ngModel)]="enterpriseAuthRecord.auditStaffName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="createTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.lastModifyTime" for="field_lastModifyTime">Last Modify Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastModifyTime" type="datetime-local" class="form-control" name="lastModifyTime" [(ngModel)]="lastModifyTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{
+    "dtlAppMockApp": {
+        "bankcardAuthRecord": {
+            "home": {
+                "title": "Bankcard Auth Records",
+                "createLabel": "创建新 Bankcard Auth Record",
+                "createOrEditLabel": "创建或编辑 Bankcard Auth Record"
+            },
+            "created": "Bankcard Auth Record {{ param }} 创建成功",
+            "updated": "Bankcard Auth Record {{ param }} 更新成功",
+            "deleted": "Bankcard Auth Record {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Bankcard Auth Record {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Bankcard Auth Record"
+            },
+            "txnId": "Txn Id",
+            "userId": "User Id",
+            "bankName": "Bank Name",
+            "bankAccountName": "Bank Account Name",
+            "bankCardNum": "Bank Card Num",
+            "bankCardImgId": "Bank Card Img Id",
+            "authStatus": "Auth Status",
+            "auditOpinion": "Audit Opinion",
+            "auditStaffName": "Audit Staff Name",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

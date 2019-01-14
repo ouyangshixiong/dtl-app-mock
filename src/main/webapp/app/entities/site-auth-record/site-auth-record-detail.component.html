@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="siteAuthRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.siteAuthRecord.detail.title">Site Auth Record</span> {{siteAuthRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.userId">User Id</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.type">Type</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.address">Address</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.siteImgIds">Site Img Ids</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.siteImgIds}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.authStatus">Auth Status</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.authStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.auditOpinion">Audit Opinion</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.auditOpinion}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.auditStaffName">Audit Staff Name</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.auditStaffName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteAuthRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{siteAuthRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/site-auth-record', siteAuthRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

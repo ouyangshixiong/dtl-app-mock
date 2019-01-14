@@ -1,0 +1,26 @@
+{
+    "dtlAppMockApp": {
+        "recommendRecord": {
+            "home": {
+                "title": "Recommend Records",
+                "createLabel": "Create a new Recommend Record",
+                "createOrEditLabel": "Create or edit a Recommend Record"
+            },
+            "created": "A new Recommend Record is created with identifier {{ param }}",
+            "updated": "A Recommend Record is updated with identifier {{ param }}",
+            "deleted": "A Recommend Record is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Recommend Record {{ id }}?"
+            },
+            "detail": {
+                "title": "Recommend Record"
+            },
+            "recUserId": "Rec User Id",
+            "userId": "User Id",
+            "status": "Status",
+            "identityFlag": "Identity Flag",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "dtlAppMockApp": {
+        "realnameInfo": {
+            "home": {
+                "title": "Realname Infos",
+                "createLabel": "创建新 Realname Info",
+                "createOrEditLabel": "创建或编辑 Realname Info"
+            },
+            "created": "Realname Info {{ param }} 创建成功",
+            "updated": "Realname Info {{ param }} 更新成功",
+            "deleted": "Realname Info {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Realname Info {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Realname Info"
+            },
+            "userId": "User Id",
+            "realName": "Real Name",
+            "idCardNum": "Id Card Num",
+            "idCardImgIdA": "Id Card Img Id A",
+            "idCardImgIdB": "Id Card Img Id B",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

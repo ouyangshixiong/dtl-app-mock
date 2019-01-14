@@ -1,0 +1,31 @@
+{
+    "dtlAppMockApp": {
+        "dTLUser": {
+            "home": {
+                "title": "DTL Users",
+                "createLabel": "创建新 DTL User",
+                "createOrEditLabel": "创建或编辑 DTL User"
+            },
+            "created": "DTL User {{ param }} 创建成功",
+            "updated": "DTL User {{ param }} 更新成功",
+            "deleted": "DTL User {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 DTL User {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "DTL User"
+            },
+            "userRoleId": "User Role Id",
+            "name": "Name",
+            "account": "Account",
+            "password": "Password",
+            "status": "Status",
+            "userType": "User Type",
+            "userIdentity": "User Identity",
+            "source": "Source",
+            "ipAddr": "Ip Addr",
+            "regTime": "Reg Time",
+            "lastLoginTime": "Last Login Time"
+        }
+    }
+}

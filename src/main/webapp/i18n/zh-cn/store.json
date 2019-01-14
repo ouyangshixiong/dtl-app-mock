@@ -1,0 +1,29 @@
+{
+    "dtlAppMockApp": {
+        "store": {
+            "home": {
+                "title": "Stores",
+                "createLabel": "创建新 Store",
+                "createOrEditLabel": "创建或编辑 Store"
+            },
+            "created": "Store {{ param }} 创建成功",
+            "updated": "Store {{ param }} 更新成功",
+            "deleted": "Store {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Store {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Store"
+            },
+            "name": "Name",
+            "storeType": "Store Type",
+            "address": "Address",
+            "area": "Area",
+            "linkman": "Linkman",
+            "tel": "Tel",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

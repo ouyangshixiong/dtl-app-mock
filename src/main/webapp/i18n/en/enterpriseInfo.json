@@ -1,0 +1,30 @@
+{
+    "dtlAppMockApp": {
+        "enterpriseInfo": {
+            "home": {
+                "title": "Enterprise Infos",
+                "createLabel": "Create a new Enterprise Info",
+                "createOrEditLabel": "Create or edit a Enterprise Info"
+            },
+            "created": "A new Enterprise Info is created with identifier {{ param }}",
+            "updated": "A Enterprise Info is updated with identifier {{ param }}",
+            "deleted": "A Enterprise Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Enterprise Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Enterprise Info"
+            },
+            "userId": "User Id",
+            "name": "Name",
+            "legalPersonName": "Legal Person Name",
+            "legalPersonIdCardNum": "Legal Person Id Card Num",
+            "legalPersonMobile": "Legal Person Mobile",
+            "enterpriseTel": "Enterprise Tel",
+            "businessLicenseImgId": "Business License Img Id",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

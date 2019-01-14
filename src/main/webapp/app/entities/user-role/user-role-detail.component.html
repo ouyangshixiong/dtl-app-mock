@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userRole">
+            <h2><span jhiTranslate="dtlAppMockApp.userRole.detail.title">User Role</span> {{userRole.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.userRole.name">Name</span></dt>
+                <dd>
+                    <span>{{userRole.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userRole.status">Status</span></dt>
+                <dd>
+                    <span>{{userRole.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userRole.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{userRole.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userRole.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{userRole.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-role', userRole.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

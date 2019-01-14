@@ -1,0 +1,72 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.enterpriseInfo.home.title">Enterprise Infos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-enterprise-info" [routerLink]="['/enterprise-info/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.enterpriseInfo.home.createLabel">
+            Create new Enterprise Info
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="enterpriseInfos">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.userId">User Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.name">Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.legalPersonName">Legal Person Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.legalPersonIdCardNum">Legal Person Id Card Num</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.legalPersonMobile">Legal Person Mobile</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.enterpriseTel">Enterprise Tel</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.businessLicenseImgId">Business License Img Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.status">Status</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.createTime">Create Time</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseInfo.lastModifyTime">Last Modify Time</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let enterpriseInfo of enterpriseInfos ;trackBy: trackId">
+                <td><a [routerLink]="['/enterprise-info', enterpriseInfo.id, 'view' ]">{{enterpriseInfo.id}}</a></td>
+                <td>{{enterpriseInfo.userId}}</td>
+                <td>{{enterpriseInfo.name}}</td>
+                <td>{{enterpriseInfo.legalPersonName}}</td>
+                <td>{{enterpriseInfo.legalPersonIdCardNum}}</td>
+                <td>{{enterpriseInfo.legalPersonMobile}}</td>
+                <td>{{enterpriseInfo.enterpriseTel}}</td>
+                <td>{{enterpriseInfo.businessLicenseImgId}}</td>
+                <td>{{enterpriseInfo.status}}</td>
+                <td>{{enterpriseInfo.createTime | date:'medium'}}</td>
+                <td>{{enterpriseInfo.lastModifyTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/enterprise-info', enterpriseInfo.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/enterprise-info', enterpriseInfo.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'enterprise-info/'+ enterpriseInfo.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,277 @@
+/** 短信验证码流水记录表 */
+entity Isp {
+    txnId String,
+    mobile String,
+    template  String,
+    status Integer,
+    createTime Instant
+}
+
+/** 银行卡认证信息表 */
+entity BankcardInfo {
+	userId Integer,
+    bankName String,
+    bankAccountName String,
+    bankCardNum  String,
+    bankCardImgId Integer,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/** 企业认证信息表 */
+entity EnterpriseInfo {
+	userId Integer,
+	name String,
+	legalPersonName String,
+	legalPersonIdCardNum String,
+    legalPersonMobile String,
+    enterpriseTel String,
+    businessLicenseImgId Integer,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/** 企业认证记录表 */
+entity EnterpriseAuthRecord {
+	txnId String,
+    userId Integer,
+    name String,
+    legalPersonName String,
+	legalPersonIdCardNum String,
+    legalPersonMobile String,
+    enterpriseTel String,
+    businessLicenseImgId Integer,
+    authStatus Integer,
+    auditOpinion String,
+    auditStaffName String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**实名认证信息表*/
+entity RealnameInfo {
+	userId Integer,
+    realName String,
+    idCardNum String,
+    idCardImgIdA Integer,
+    idCardImgIdB Integer,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**用户信息表*/
+entity DTLUser {
+	userRoleId Integer,
+	name String,
+	account String,
+	password String,
+	status Integer,
+	userType Integer,
+	userIdentity Integer,
+    source Integer,
+    ipAddr String,
+    regTime Instant,
+    lastLoginTime Instant
+}
+
+/**用户等级表*/
+entity UserLevel {
+	name String,
+    integralRule Integer,
+    userIdentity Integer,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+/**用户角色表*/
+entity UserRole {
+	name String,
+	status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**推荐记录表*/
+entity RecommendRecord {
+	recUserId Integer,
+	userId Integer,
+    status Integer,
+    identityFlag String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+
+/**实地认证记录表*/
+entity SiteAuthRecord {
+	txnId String,
+	userId Integer,
+    type Integer,
+    address String,
+    siteImgIds String,
+    authStatus  Integer,
+    auditOpinion String,
+    auditStaffName String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**图片信息表*/
+entity Image {
+	name String,
+    url String,
+    size String,
+    pixel String,
+    format String,
+    originalFileName String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**店铺信息表*/
+entity Store {
+	name String,
+    storeType Integer,
+    address String,
+    area String,
+    linkman String,
+    tel String,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**后台信息用户表*/
+entity Staff {
+	staffName String,
+    password String,
+    realName String,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**实地认证信息表*/
+entity SiteInfo {
+	userId Integer,
+    siteType Integer,
+    address String,
+    siteImgIds String,
+    status Integer,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+
+/**实名认证记录表*/
+entity RealnameAuthRecord {
+	txnId String,
+    userId Integer,
+    realName String,
+    idCardNum String,
+    idCardImgA Integer,
+    idCardImgB Integer,
+    authStatus Integer,
+    auditOpinion String,
+    auditStaffName String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**银行卡认证记录表*/
+entity BankcardAuthRecord {
+	txnId String,
+    userId Integer,
+    bankName String,
+    bankAccountName String,
+    bankCardNum String,
+    bankCardImgId Integer,
+    authStatus Integer,
+    auditOpinion String,
+    auditStaffName String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**商品信息表*/
+entity Product {
+	txnId String,
+	title String,
+    categoryId Integer,
+    standardId Integer,
+    storeId Integer,
+    productImg String,
+    unitPrice BigDecimal,
+    amount Integer,
+    stock Integer,
+    minDeal Integer,
+    depotAddress String,
+    contactName String,
+    mobile String,
+    description String,
+    status Integer,
+    createBy String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**店铺用户关系表*/
+entity StoreUser {
+    storeId Integer,
+	userId Integer
+}
+
+/**店铺认证记录表*/
+entity StoreAuthRecord {
+	txnId String,
+    name String,
+    storeType Integer,
+    address String,
+    area String,
+    linkman String,
+    tel String,
+    authStatus Integer,
+    auditOpinion String,
+    auditStaffName String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+/**商品审核历史记录表*/
+entity ProductRecord {
+	txnId String,
+    title String,
+    categoryId Integer,
+    standardId Integer,
+    storeId Integer,
+    productImg String,
+    unitPrice BigDecimal,
+    stock Integer,
+    minDeal Integer,
+    depotAddress String,
+    contactName String,
+    mobile String,
+    description String,
+    status Integer,
+    objection String,
+    recordName String,
+    createBy String,
+    createTime Instant,
+    lastModifyTime Instant
+}
+
+
+// Set pagination options
+paginate Product, DTLUser with infinite-scroll
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

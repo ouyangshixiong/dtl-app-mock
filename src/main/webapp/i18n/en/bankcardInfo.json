@@ -1,0 +1,28 @@
+{
+    "dtlAppMockApp": {
+        "bankcardInfo": {
+            "home": {
+                "title": "Bankcard Infos",
+                "createLabel": "Create a new Bankcard Info",
+                "createOrEditLabel": "Create or edit a Bankcard Info"
+            },
+            "created": "A new Bankcard Info is created with identifier {{ param }}",
+            "updated": "A Bankcard Info is updated with identifier {{ param }}",
+            "deleted": "A Bankcard Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bankcard Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Bankcard Info"
+            },
+            "userId": "User Id",
+            "bankName": "Bank Name",
+            "bankAccountName": "Bank Account Name",
+            "bankCardNum": "Bank Card Num",
+            "bankCardImgId": "Bank Card Img Id",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

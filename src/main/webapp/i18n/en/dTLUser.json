@@ -1,0 +1,31 @@
+{
+    "dtlAppMockApp": {
+        "dTLUser": {
+            "home": {
+                "title": "DTL Users",
+                "createLabel": "Create a new DTL User",
+                "createOrEditLabel": "Create or edit a DTL User"
+            },
+            "created": "A new DTL User is created with identifier {{ param }}",
+            "updated": "A DTL User is updated with identifier {{ param }}",
+            "deleted": "A DTL User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete DTL User {{ id }}?"
+            },
+            "detail": {
+                "title": "DTL User"
+            },
+            "userRoleId": "User Role Id",
+            "name": "Name",
+            "account": "Account",
+            "password": "Password",
+            "status": "Status",
+            "userType": "User Type",
+            "userIdentity": "User Identity",
+            "source": "Source",
+            "ipAddr": "Ip Addr",
+            "regTime": "Reg Time",
+            "lastLoginTime": "Last Login Time"
+        }
+    }
+}

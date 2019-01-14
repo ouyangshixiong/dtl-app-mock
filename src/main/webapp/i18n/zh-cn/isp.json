@@ -1,0 +1,25 @@
+{
+    "dtlAppMockApp": {
+        "isp": {
+            "home": {
+                "title": "Isps",
+                "createLabel": "创建新 Isp",
+                "createOrEditLabel": "创建或编辑 Isp"
+            },
+            "created": "Isp {{ param }} 创建成功",
+            "updated": "Isp {{ param }} 更新成功",
+            "deleted": "Isp {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Isp {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Isp"
+            },
+            "txnId": "Txn Id",
+            "mobile": "Mobile",
+            "template": "Template",
+            "status": "Status",
+            "createTime": "Create Time"
+        }
+    }
+}

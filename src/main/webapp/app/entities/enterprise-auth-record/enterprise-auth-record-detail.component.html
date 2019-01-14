@@ -1,0 +1,75 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="enterpriseAuthRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.detail.title">Enterprise Auth Record</span> {{enterpriseAuthRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.userId">User Id</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.name">Name</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonName">Legal Person Name</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.legalPersonName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonIdCardNum">Legal Person Id Card Num</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.legalPersonIdCardNum}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonMobile">Legal Person Mobile</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.legalPersonMobile}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.enterpriseTel">Enterprise Tel</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.enterpriseTel}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.businessLicenseImgId">Business License Img Id</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.businessLicenseImgId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.authStatus">Auth Status</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.authStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.auditOpinion">Audit Opinion</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.auditOpinion}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.auditStaffName">Audit Staff Name</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.auditStaffName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{enterpriseAuthRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/enterprise-auth-record', enterpriseAuthRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="productRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.productRecord.detail.title">Product Record</span> {{productRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{productRecord.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.title">Title</span></dt>
+                <dd>
+                    <span>{{productRecord.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.categoryId">Category Id</span></dt>
+                <dd>
+                    <span>{{productRecord.categoryId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.standardId">Standard Id</span></dt>
+                <dd>
+                    <span>{{productRecord.standardId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.storeId">Store Id</span></dt>
+                <dd>
+                    <span>{{productRecord.storeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.productImg">Product Img</span></dt>
+                <dd>
+                    <span>{{productRecord.productImg}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.unitPrice">Unit Price</span></dt>
+                <dd>
+                    <span>{{productRecord.unitPrice}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.stock">Stock</span></dt>
+                <dd>
+                    <span>{{productRecord.stock}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.minDeal">Min Deal</span></dt>
+                <dd>
+                    <span>{{productRecord.minDeal}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.depotAddress">Depot Address</span></dt>
+                <dd>
+                    <span>{{productRecord.depotAddress}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.contactName">Contact Name</span></dt>
+                <dd>
+                    <span>{{productRecord.contactName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.mobile">Mobile</span></dt>
+                <dd>
+                    <span>{{productRecord.mobile}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.description">Description</span></dt>
+                <dd>
+                    <span>{{productRecord.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.status">Status</span></dt>
+                <dd>
+                    <span>{{productRecord.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.objection">Objection</span></dt>
+                <dd>
+                    <span>{{productRecord.objection}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.recordName">Record Name</span></dt>
+                <dd>
+                    <span>{{productRecord.recordName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.createBy">Create By</span></dt>
+                <dd>
+                    <span>{{productRecord.createBy}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{productRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.productRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{productRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/product-record', productRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

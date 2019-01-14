@@ -1,0 +1,56 @@
+{
+    "name": "SiteAuthRecord",
+    "fields": [
+        {
+            "fieldName": "txnId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "siteImgIds",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "authStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "auditOpinion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditStaffName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065233",
+    "javadoc": "实地认证记录表",
+    "entityTableName": "site_auth_record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

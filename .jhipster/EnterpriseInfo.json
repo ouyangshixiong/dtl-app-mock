@@ -1,0 +1,56 @@
+{
+    "name": "EnterpriseInfo",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalPersonName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalPersonIdCardNum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalPersonMobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enterpriseTel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "businessLicenseImgId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065226",
+    "javadoc": "企业认证信息表",
+    "entityTableName": "enterprise_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

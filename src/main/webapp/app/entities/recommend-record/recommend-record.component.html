@@ -1,0 +1,64 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.recommendRecord.home.title">Recommend Records</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-recommend-record" [routerLink]="['/recommend-record/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.recommendRecord.home.createLabel">
+            Create new Recommend Record
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="recommendRecords">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.recommendRecord.recUserId">Rec User Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.recommendRecord.userId">User Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.recommendRecord.status">Status</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.recommendRecord.identityFlag">Identity Flag</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.recommendRecord.createTime">Create Time</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.recommendRecord.lastModifyTime">Last Modify Time</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let recommendRecord of recommendRecords ;trackBy: trackId">
+                <td><a [routerLink]="['/recommend-record', recommendRecord.id, 'view' ]">{{recommendRecord.id}}</a></td>
+                <td>{{recommendRecord.recUserId}}</td>
+                <td>{{recommendRecord.userId}}</td>
+                <td>{{recommendRecord.status}}</td>
+                <td>{{recommendRecord.identityFlag}}</td>
+                <td>{{recommendRecord.createTime | date:'medium'}}</td>
+                <td>{{recommendRecord.lastModifyTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/recommend-record', recommendRecord.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/recommend-record', recommendRecord.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'recommend-record/'+ recommendRecord.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

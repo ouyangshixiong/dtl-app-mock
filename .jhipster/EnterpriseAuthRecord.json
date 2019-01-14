@@ -1,0 +1,68 @@
+{
+    "name": "EnterpriseAuthRecord",
+    "fields": [
+        {
+            "fieldName": "txnId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalPersonName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalPersonIdCardNum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "legalPersonMobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enterpriseTel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "businessLicenseImgId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "authStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "auditOpinion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditStaffName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065227",
+    "javadoc": "企业认证记录表",
+    "entityTableName": "enterprise_auth_record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

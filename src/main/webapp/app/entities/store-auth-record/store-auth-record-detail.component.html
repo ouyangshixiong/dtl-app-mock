@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="storeAuthRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.storeAuthRecord.detail.title">Store Auth Record</span> {{storeAuthRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.name">Name</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.storeType">Store Type</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.storeType}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.address">Address</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.area">Area</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.area}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.linkman">Linkman</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.linkman}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.tel">Tel</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.tel}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.authStatus">Auth Status</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.authStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.auditOpinion">Audit Opinion</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.auditOpinion}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.auditStaffName">Audit Staff Name</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.auditStaffName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeAuthRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{storeAuthRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/store-auth-record', storeAuthRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

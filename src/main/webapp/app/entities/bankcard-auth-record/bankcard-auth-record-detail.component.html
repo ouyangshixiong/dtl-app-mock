@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="bankcardAuthRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.detail.title">Bankcard Auth Record</span> {{bankcardAuthRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.userId">User Id</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankName">Bank Name</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.bankName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankAccountName">Bank Account Name</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.bankAccountName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankCardNum">Bank Card Num</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.bankCardNum}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankCardImgId">Bank Card Img Id</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.bankCardImgId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.authStatus">Auth Status</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.authStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.auditOpinion">Audit Opinion</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.auditOpinion}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.auditStaffName">Audit Staff Name</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.auditStaffName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.bankcardAuthRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{bankcardAuthRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/bankcard-auth-record', bankcardAuthRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

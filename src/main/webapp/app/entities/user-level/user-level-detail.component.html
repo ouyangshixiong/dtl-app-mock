@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userLevel">
+            <h2><span jhiTranslate="dtlAppMockApp.userLevel.detail.title">User Level</span> {{userLevel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.userLevel.name">Name</span></dt>
+                <dd>
+                    <span>{{userLevel.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userLevel.integralRule">Integral Rule</span></dt>
+                <dd>
+                    <span>{{userLevel.integralRule}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userLevel.userIdentity">User Identity</span></dt>
+                <dd>
+                    <span>{{userLevel.userIdentity}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userLevel.status">Status</span></dt>
+                <dd>
+                    <span>{{userLevel.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userLevel.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{userLevel.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.userLevel.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{userLevel.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-level', userLevel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

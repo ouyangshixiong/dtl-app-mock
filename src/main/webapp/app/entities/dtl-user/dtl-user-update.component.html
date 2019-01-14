@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-dtl-user-heading" jhiTranslate="dtlAppMockApp.dTLUser.home.createOrEditLabel">Create or edit a DTL User</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!dTLUser.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="dTLUser.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.userRoleId" for="field_userRoleId">User Role Id</label>
+                    <input type="number" class="form-control" name="userRoleId" id="field_userRoleId"
+                        [(ngModel)]="dTLUser.userRoleId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="dTLUser.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.account" for="field_account">Account</label>
+                    <input type="text" class="form-control" name="account" id="field_account"
+                        [(ngModel)]="dTLUser.account" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.password" for="field_password">Password</label>
+                    <input type="text" class="form-control" name="password" id="field_password"
+                        [(ngModel)]="dTLUser.password" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.status" for="field_status">Status</label>
+                    <input type="number" class="form-control" name="status" id="field_status"
+                        [(ngModel)]="dTLUser.status" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.userType" for="field_userType">User Type</label>
+                    <input type="number" class="form-control" name="userType" id="field_userType"
+                        [(ngModel)]="dTLUser.userType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.userIdentity" for="field_userIdentity">User Identity</label>
+                    <input type="number" class="form-control" name="userIdentity" id="field_userIdentity"
+                        [(ngModel)]="dTLUser.userIdentity" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.source" for="field_source">Source</label>
+                    <input type="number" class="form-control" name="source" id="field_source"
+                        [(ngModel)]="dTLUser.source" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.ipAddr" for="field_ipAddr">Ip Addr</label>
+                    <input type="text" class="form-control" name="ipAddr" id="field_ipAddr"
+                        [(ngModel)]="dTLUser.ipAddr" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.regTime" for="field_regTime">Reg Time</label>
+                    <div class="d-flex">
+                        <input id="field_regTime" type="datetime-local" class="form-control" name="regTime" [(ngModel)]="regTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.dTLUser.lastLoginTime" for="field_lastLoginTime">Last Login Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastLoginTime" type="datetime-local" class="form-control" name="lastLoginTime" [(ngModel)]="lastLoginTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

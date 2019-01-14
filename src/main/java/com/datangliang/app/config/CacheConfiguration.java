@@ -38,6 +38,26 @@ public class CacheConfiguration {
             cm.createCache(com.datangliang.app.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.datangliang.app.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.datangliang.app.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.Isp.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.BankcardInfo.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.EnterpriseInfo.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.EnterpriseAuthRecord.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.RealnameInfo.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.DTLUser.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.UserLevel.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.UserRole.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.RecommendRecord.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.SiteAuthRecord.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.Image.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.Store.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.Staff.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.SiteInfo.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.RealnameAuthRecord.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.BankcardAuthRecord.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.Product.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.StoreUser.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.StoreAuthRecord.class.getName(), jcacheConfiguration);
+            cm.createCache(com.datangliang.app.domain.ProductRecord.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
