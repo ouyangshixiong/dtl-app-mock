@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="siteInfo">
+            <h2><span jhiTranslate="dtlAppMockApp.siteInfo.detail.title">Site Info</span> {{siteInfo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.userId">User Id</span></dt>
+                <dd>
+                    <span>{{siteInfo.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.siteType">Site Type</span></dt>
+                <dd>
+                    <span>{{siteInfo.siteType}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.address">Address</span></dt>
+                <dd>
+                    <span>{{siteInfo.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.siteImgIds">Site Img Ids</span></dt>
+                <dd>
+                    <span>{{siteInfo.siteImgIds}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.status">Status</span></dt>
+                <dd>
+                    <span>{{siteInfo.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{siteInfo.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.siteInfo.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{siteInfo.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/site-info', siteInfo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

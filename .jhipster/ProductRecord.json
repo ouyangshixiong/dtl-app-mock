@@ -1,0 +1,92 @@
+{
+    "name": "ProductRecord",
+    "fields": [
+        {
+            "fieldName": "txnId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "categoryId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "standardId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "storeId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "productImg",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitPrice",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "stock",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "minDeal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "depotAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "objection",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065243",
+    "javadoc": "商品审核历史记录表",
+    "entityTableName": "product_record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

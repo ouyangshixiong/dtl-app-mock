@@ -1,0 +1,30 @@
+{
+    "dtlAppMockApp": {
+        "siteAuthRecord": {
+            "home": {
+                "title": "Site Auth Records",
+                "createLabel": "Create a new Site Auth Record",
+                "createOrEditLabel": "Create or edit a Site Auth Record"
+            },
+            "created": "A new Site Auth Record is created with identifier {{ param }}",
+            "updated": "A Site Auth Record is updated with identifier {{ param }}",
+            "deleted": "A Site Auth Record is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Site Auth Record {{ id }}?"
+            },
+            "detail": {
+                "title": "Site Auth Record"
+            },
+            "txnId": "Txn Id",
+            "userId": "User Id",
+            "type": "Type",
+            "address": "Address",
+            "siteImgIds": "Site Img Ids",
+            "authStatus": "Auth Status",
+            "auditOpinion": "Audit Opinion",
+            "auditStaffName": "Audit Staff Name",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

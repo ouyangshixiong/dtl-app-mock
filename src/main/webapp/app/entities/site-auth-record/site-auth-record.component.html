@@ -1,0 +1,72 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.siteAuthRecord.home.title">Site Auth Records</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-site-auth-record" [routerLink]="['/site-auth-record/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.siteAuthRecord.home.createLabel">
+            Create new Site Auth Record
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="siteAuthRecords">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.txnId">Txn Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.userId">User Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.type">Type</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.address">Address</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.siteImgIds">Site Img Ids</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.authStatus">Auth Status</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.auditOpinion">Audit Opinion</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.auditStaffName">Audit Staff Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.createTime">Create Time</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.siteAuthRecord.lastModifyTime">Last Modify Time</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let siteAuthRecord of siteAuthRecords ;trackBy: trackId">
+                <td><a [routerLink]="['/site-auth-record', siteAuthRecord.id, 'view' ]">{{siteAuthRecord.id}}</a></td>
+                <td>{{siteAuthRecord.txnId}}</td>
+                <td>{{siteAuthRecord.userId}}</td>
+                <td>{{siteAuthRecord.type}}</td>
+                <td>{{siteAuthRecord.address}}</td>
+                <td>{{siteAuthRecord.siteImgIds}}</td>
+                <td>{{siteAuthRecord.authStatus}}</td>
+                <td>{{siteAuthRecord.auditOpinion}}</td>
+                <td>{{siteAuthRecord.auditStaffName}}</td>
+                <td>{{siteAuthRecord.createTime | date:'medium'}}</td>
+                <td>{{siteAuthRecord.lastModifyTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/site-auth-record', siteAuthRecord.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/site-auth-record', siteAuthRecord.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'site-auth-record/'+ siteAuthRecord.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

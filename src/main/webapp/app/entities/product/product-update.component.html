@@ -1,0 +1,118 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-product-heading" jhiTranslate="dtlAppMockApp.product.home.createOrEditLabel">Create or edit a Product</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!product.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="product.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.txnId" for="field_txnId">Txn Id</label>
+                    <input type="text" class="form-control" name="txnId" id="field_txnId"
+                        [(ngModel)]="product.txnId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.title" for="field_title">Title</label>
+                    <input type="text" class="form-control" name="title" id="field_title"
+                        [(ngModel)]="product.title" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.categoryId" for="field_categoryId">Category Id</label>
+                    <input type="number" class="form-control" name="categoryId" id="field_categoryId"
+                        [(ngModel)]="product.categoryId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.standardId" for="field_standardId">Standard Id</label>
+                    <input type="number" class="form-control" name="standardId" id="field_standardId"
+                        [(ngModel)]="product.standardId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.storeId" for="field_storeId">Store Id</label>
+                    <input type="number" class="form-control" name="storeId" id="field_storeId"
+                        [(ngModel)]="product.storeId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.productImg" for="field_productImg">Product Img</label>
+                    <input type="text" class="form-control" name="productImg" id="field_productImg"
+                        [(ngModel)]="product.productImg" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.unitPrice" for="field_unitPrice">Unit Price</label>
+                    <input type="number" class="form-control" name="unitPrice" id="field_unitPrice"
+                        [(ngModel)]="product.unitPrice" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.amount" for="field_amount">Amount</label>
+                    <input type="number" class="form-control" name="amount" id="field_amount"
+                        [(ngModel)]="product.amount" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.stock" for="field_stock">Stock</label>
+                    <input type="number" class="form-control" name="stock" id="field_stock"
+                        [(ngModel)]="product.stock" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.minDeal" for="field_minDeal">Min Deal</label>
+                    <input type="number" class="form-control" name="minDeal" id="field_minDeal"
+                        [(ngModel)]="product.minDeal" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.depotAddress" for="field_depotAddress">Depot Address</label>
+                    <input type="text" class="form-control" name="depotAddress" id="field_depotAddress"
+                        [(ngModel)]="product.depotAddress" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.contactName" for="field_contactName">Contact Name</label>
+                    <input type="text" class="form-control" name="contactName" id="field_contactName"
+                        [(ngModel)]="product.contactName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.mobile" for="field_mobile">Mobile</label>
+                    <input type="text" class="form-control" name="mobile" id="field_mobile"
+                        [(ngModel)]="product.mobile" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="product.description" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.status" for="field_status">Status</label>
+                    <input type="number" class="form-control" name="status" id="field_status"
+                        [(ngModel)]="product.status" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.createBy" for="field_createBy">Create By</label>
+                    <input type="text" class="form-control" name="createBy" id="field_createBy"
+                        [(ngModel)]="product.createBy" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="createTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.product.lastModifyTime" for="field_lastModifyTime">Last Modify Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastModifyTime" type="datetime-local" class="form-control" name="lastModifyTime" [(ngModel)]="lastModifyTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-store-auth-record-heading" jhiTranslate="dtlAppMockApp.storeAuthRecord.home.createOrEditLabel">Create or edit a Store Auth Record</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!storeAuthRecord.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="storeAuthRecord.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.txnId" for="field_txnId">Txn Id</label>
+                    <input type="text" class="form-control" name="txnId" id="field_txnId"
+                        [(ngModel)]="storeAuthRecord.txnId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="storeAuthRecord.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.storeType" for="field_storeType">Store Type</label>
+                    <input type="number" class="form-control" name="storeType" id="field_storeType"
+                        [(ngModel)]="storeAuthRecord.storeType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.address" for="field_address">Address</label>
+                    <input type="text" class="form-control" name="address" id="field_address"
+                        [(ngModel)]="storeAuthRecord.address" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.area" for="field_area">Area</label>
+                    <input type="text" class="form-control" name="area" id="field_area"
+                        [(ngModel)]="storeAuthRecord.area" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.linkman" for="field_linkman">Linkman</label>
+                    <input type="text" class="form-control" name="linkman" id="field_linkman"
+                        [(ngModel)]="storeAuthRecord.linkman" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.tel" for="field_tel">Tel</label>
+                    <input type="text" class="form-control" name="tel" id="field_tel"
+                        [(ngModel)]="storeAuthRecord.tel" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.authStatus" for="field_authStatus">Auth Status</label>
+                    <input type="number" class="form-control" name="authStatus" id="field_authStatus"
+                        [(ngModel)]="storeAuthRecord.authStatus" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.auditOpinion" for="field_auditOpinion">Audit Opinion</label>
+                    <input type="text" class="form-control" name="auditOpinion" id="field_auditOpinion"
+                        [(ngModel)]="storeAuthRecord.auditOpinion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.auditStaffName" for="field_auditStaffName">Audit Staff Name</label>
+                    <input type="text" class="form-control" name="auditStaffName" id="field_auditStaffName"
+                        [(ngModel)]="storeAuthRecord.auditStaffName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="createTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.storeAuthRecord.lastModifyTime" for="field_lastModifyTime">Last Modify Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastModifyTime" type="datetime-local" class="form-control" name="lastModifyTime" [(ngModel)]="lastModifyTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

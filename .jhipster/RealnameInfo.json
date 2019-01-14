@@ -1,0 +1,48 @@
+{
+    "name": "RealnameInfo",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "realName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idCardNum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idCardImgIdA",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "idCardImgIdB",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065228",
+    "javadoc": "实名认证信息表",
+    "entityTableName": "realname_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

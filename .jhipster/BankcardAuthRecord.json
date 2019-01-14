@@ -1,0 +1,60 @@
+{
+    "name": "BankcardAuthRecord",
+    "fields": [
+        {
+            "fieldName": "txnId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "bankName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankAccountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankCardNum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankCardImgId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "authStatus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "auditOpinion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "auditStaffName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065239",
+    "javadoc": "银行卡认证记录表",
+    "entityTableName": "bankcard_auth_record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

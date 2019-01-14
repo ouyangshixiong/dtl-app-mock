@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="enterpriseInfo">
+            <h2><span jhiTranslate="dtlAppMockApp.enterpriseInfo.detail.title">Enterprise Info</span> {{enterpriseInfo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.userId">User Id</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.name">Name</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.legalPersonName">Legal Person Name</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.legalPersonName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.legalPersonIdCardNum">Legal Person Id Card Num</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.legalPersonIdCardNum}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.legalPersonMobile">Legal Person Mobile</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.legalPersonMobile}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.enterpriseTel">Enterprise Tel</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.enterpriseTel}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.businessLicenseImgId">Business License Img Id</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.businessLicenseImgId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.status">Status</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.enterpriseInfo.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{enterpriseInfo.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/enterprise-info', enterpriseInfo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

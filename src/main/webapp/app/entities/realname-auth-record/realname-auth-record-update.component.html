@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-realname-auth-record-heading" jhiTranslate="dtlAppMockApp.realnameAuthRecord.home.createOrEditLabel">Create or edit a Realname Auth Record</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!realnameAuthRecord.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="realnameAuthRecord.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.txnId" for="field_txnId">Txn Id</label>
+                    <input type="text" class="form-control" name="txnId" id="field_txnId"
+                        [(ngModel)]="realnameAuthRecord.txnId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.userId" for="field_userId">User Id</label>
+                    <input type="number" class="form-control" name="userId" id="field_userId"
+                        [(ngModel)]="realnameAuthRecord.userId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.realName" for="field_realName">Real Name</label>
+                    <input type="text" class="form-control" name="realName" id="field_realName"
+                        [(ngModel)]="realnameAuthRecord.realName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.idCardNum" for="field_idCardNum">Id Card Num</label>
+                    <input type="text" class="form-control" name="idCardNum" id="field_idCardNum"
+                        [(ngModel)]="realnameAuthRecord.idCardNum" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.idCardImgA" for="field_idCardImgA">Id Card Img A</label>
+                    <input type="number" class="form-control" name="idCardImgA" id="field_idCardImgA"
+                        [(ngModel)]="realnameAuthRecord.idCardImgA" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.idCardImgB" for="field_idCardImgB">Id Card Img B</label>
+                    <input type="number" class="form-control" name="idCardImgB" id="field_idCardImgB"
+                        [(ngModel)]="realnameAuthRecord.idCardImgB" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.authStatus" for="field_authStatus">Auth Status</label>
+                    <input type="number" class="form-control" name="authStatus" id="field_authStatus"
+                        [(ngModel)]="realnameAuthRecord.authStatus" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.auditOpinion" for="field_auditOpinion">Audit Opinion</label>
+                    <input type="text" class="form-control" name="auditOpinion" id="field_auditOpinion"
+                        [(ngModel)]="realnameAuthRecord.auditOpinion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.auditStaffName" for="field_auditStaffName">Audit Staff Name</label>
+                    <input type="text" class="form-control" name="auditStaffName" id="field_auditStaffName"
+                        [(ngModel)]="realnameAuthRecord.auditStaffName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="createTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.realnameAuthRecord.lastModifyTime" for="field_lastModifyTime">Last Modify Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastModifyTime" type="datetime-local" class="form-control" name="lastModifyTime" [(ngModel)]="lastModifyTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

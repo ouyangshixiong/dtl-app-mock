@@ -1,0 +1,28 @@
+{
+    "dtlAppMockApp": {
+        "realnameInfo": {
+            "home": {
+                "title": "Realname Infos",
+                "createLabel": "Create a new Realname Info",
+                "createOrEditLabel": "Create or edit a Realname Info"
+            },
+            "created": "A new Realname Info is created with identifier {{ param }}",
+            "updated": "A Realname Info is updated with identifier {{ param }}",
+            "deleted": "A Realname Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Realname Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Realname Info"
+            },
+            "userId": "User Id",
+            "realName": "Real Name",
+            "idCardNum": "Id Card Num",
+            "idCardImgIdA": "Id Card Img Id A",
+            "idCardImgIdB": "Id Card Img Id B",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

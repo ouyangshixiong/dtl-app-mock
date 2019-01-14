@@ -1,0 +1,68 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.image.home.title">Images</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-image" [routerLink]="['/image/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.image.home.createLabel">
+            Create new Image
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="images">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.name">Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.url">Url</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.size">Size</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.pixel">Pixel</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.format">Format</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.originalFileName">Original File Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.createTime">Create Time</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.image.lastModifyTime">Last Modify Time</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let image of images ;trackBy: trackId">
+                <td><a [routerLink]="['/image', image.id, 'view' ]">{{image.id}}</a></td>
+                <td>{{image.name}}</td>
+                <td>{{image.url}}</td>
+                <td>{{image.size}}</td>
+                <td>{{image.pixel}}</td>
+                <td>{{image.format}}</td>
+                <td>{{image.originalFileName}}</td>
+                <td>{{image.createTime | date:'medium'}}</td>
+                <td>{{image.lastModifyTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/image', image.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/image', image.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'image/'+ image.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

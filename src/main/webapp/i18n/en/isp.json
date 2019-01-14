@@ -1,0 +1,25 @@
+{
+    "dtlAppMockApp": {
+        "isp": {
+            "home": {
+                "title": "Isps",
+                "createLabel": "Create a new Isp",
+                "createOrEditLabel": "Create or edit a Isp"
+            },
+            "created": "A new Isp is created with identifier {{ param }}",
+            "updated": "A Isp is updated with identifier {{ param }}",
+            "deleted": "A Isp is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Isp {{ id }}?"
+            },
+            "detail": {
+                "title": "Isp"
+            },
+            "txnId": "Txn Id",
+            "mobile": "Mobile",
+            "template": "Template",
+            "status": "Status",
+            "createTime": "Create Time"
+        }
+    }
+}

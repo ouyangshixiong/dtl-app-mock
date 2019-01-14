@@ -1,0 +1,26 @@
+{
+    "dtlAppMockApp": {
+        "userLevel": {
+            "home": {
+                "title": "User Levels",
+                "createLabel": "Create a new User Level",
+                "createOrEditLabel": "Create or edit a User Level"
+            },
+            "created": "A new User Level is created with identifier {{ param }}",
+            "updated": "A User Level is updated with identifier {{ param }}",
+            "deleted": "A User Level is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Level {{ id }}?"
+            },
+            "detail": {
+                "title": "User Level"
+            },
+            "name": "Name",
+            "integralRule": "Integral Rule",
+            "userIdentity": "User Identity",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

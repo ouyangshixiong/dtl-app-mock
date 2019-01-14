@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="storeUser">
+            <h2><span jhiTranslate="dtlAppMockApp.storeUser.detail.title">Store User</span> {{storeUser.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.storeUser.storeId">Store Id</span></dt>
+                <dd>
+                    <span>{{storeUser.storeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.storeUser.userId">User Id</span></dt>
+                <dd>
+                    <span>{{storeUser.userId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/store-user', storeUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

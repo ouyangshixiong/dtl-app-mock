@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="realnameInfo">
+            <h2><span jhiTranslate="dtlAppMockApp.realnameInfo.detail.title">Realname Info</span> {{realnameInfo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.userId">User Id</span></dt>
+                <dd>
+                    <span>{{realnameInfo.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.realName">Real Name</span></dt>
+                <dd>
+                    <span>{{realnameInfo.realName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.idCardNum">Id Card Num</span></dt>
+                <dd>
+                    <span>{{realnameInfo.idCardNum}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.idCardImgIdA">Id Card Img Id A</span></dt>
+                <dd>
+                    <span>{{realnameInfo.idCardImgIdA}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.idCardImgIdB">Id Card Img Id B</span></dt>
+                <dd>
+                    <span>{{realnameInfo.idCardImgIdB}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.status">Status</span></dt>
+                <dd>
+                    <span>{{realnameInfo.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{realnameInfo.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameInfo.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{realnameInfo.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/realname-info', realnameInfo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

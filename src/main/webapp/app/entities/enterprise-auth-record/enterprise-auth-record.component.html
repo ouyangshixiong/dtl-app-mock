@@ -1,0 +1,78 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.home.title">Enterprise Auth Records</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-enterprise-auth-record" [routerLink]="['/enterprise-auth-record/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.home.createLabel">
+            Create new Enterprise Auth Record
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="enterpriseAuthRecords">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.txnId">Txn Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.userId">User Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.name">Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonName">Legal Person Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonIdCardNum">Legal Person Id Card Num</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.legalPersonMobile">Legal Person Mobile</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.enterpriseTel">Enterprise Tel</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.businessLicenseImgId">Business License Img Id</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.authStatus">Auth Status</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.auditOpinion">Audit Opinion</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.auditStaffName">Audit Staff Name</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.createTime">Create Time</span></th>
+            <th><span jhiTranslate="dtlAppMockApp.enterpriseAuthRecord.lastModifyTime">Last Modify Time</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let enterpriseAuthRecord of enterpriseAuthRecords ;trackBy: trackId">
+                <td><a [routerLink]="['/enterprise-auth-record', enterpriseAuthRecord.id, 'view' ]">{{enterpriseAuthRecord.id}}</a></td>
+                <td>{{enterpriseAuthRecord.txnId}}</td>
+                <td>{{enterpriseAuthRecord.userId}}</td>
+                <td>{{enterpriseAuthRecord.name}}</td>
+                <td>{{enterpriseAuthRecord.legalPersonName}}</td>
+                <td>{{enterpriseAuthRecord.legalPersonIdCardNum}}</td>
+                <td>{{enterpriseAuthRecord.legalPersonMobile}}</td>
+                <td>{{enterpriseAuthRecord.enterpriseTel}}</td>
+                <td>{{enterpriseAuthRecord.businessLicenseImgId}}</td>
+                <td>{{enterpriseAuthRecord.authStatus}}</td>
+                <td>{{enterpriseAuthRecord.auditOpinion}}</td>
+                <td>{{enterpriseAuthRecord.auditStaffName}}</td>
+                <td>{{enterpriseAuthRecord.createTime | date:'medium'}}</td>
+                <td>{{enterpriseAuthRecord.lastModifyTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/enterprise-auth-record', enterpriseAuthRecord.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/enterprise-auth-record', enterpriseAuthRecord.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'enterprise-auth-record/'+ enterpriseAuthRecord.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.product.home.title">Products</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-product" [routerLink]="['/product/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.product.home.createLabel">
+            Create new Product
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="products">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="txnId"><span jhiTranslate="dtlAppMockApp.product.txnId">Txn Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="title"><span jhiTranslate="dtlAppMockApp.product.title">Title</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="categoryId"><span jhiTranslate="dtlAppMockApp.product.categoryId">Category Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="standardId"><span jhiTranslate="dtlAppMockApp.product.standardId">Standard Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="storeId"><span jhiTranslate="dtlAppMockApp.product.storeId">Store Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="productImg"><span jhiTranslate="dtlAppMockApp.product.productImg">Product Img</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="unitPrice"><span jhiTranslate="dtlAppMockApp.product.unitPrice">Unit Price</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="amount"><span jhiTranslate="dtlAppMockApp.product.amount">Amount</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="stock"><span jhiTranslate="dtlAppMockApp.product.stock">Stock</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="minDeal"><span jhiTranslate="dtlAppMockApp.product.minDeal">Min Deal</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="depotAddress"><span jhiTranslate="dtlAppMockApp.product.depotAddress">Depot Address</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="contactName"><span jhiTranslate="dtlAppMockApp.product.contactName">Contact Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="mobile"><span jhiTranslate="dtlAppMockApp.product.mobile">Mobile</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="description"><span jhiTranslate="dtlAppMockApp.product.description">Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="status"><span jhiTranslate="dtlAppMockApp.product.status">Status</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="createBy"><span jhiTranslate="dtlAppMockApp.product.createBy">Create By</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="createTime"><span jhiTranslate="dtlAppMockApp.product.createTime">Create Time</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lastModifyTime"><span jhiTranslate="dtlAppMockApp.product.lastModifyTime">Last Modify Time</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let product of products ;trackBy: trackId">
+                <td><a [routerLink]="['/product', product.id, 'view' ]">{{product.id}}</a></td>
+                <td>{{product.txnId}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.categoryId}}</td>
+                <td>{{product.standardId}}</td>
+                <td>{{product.storeId}}</td>
+                <td>{{product.productImg}}</td>
+                <td>{{product.unitPrice}}</td>
+                <td>{{product.amount}}</td>
+                <td>{{product.stock}}</td>
+                <td>{{product.minDeal}}</td>
+                <td>{{product.depotAddress}}</td>
+                <td>{{product.contactName}}</td>
+                <td>{{product.mobile}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.status}}</td>
+                <td>{{product.createBy}}</td>
+                <td>{{product.createTime | date:'medium'}}</td>
+                <td>{{product.lastModifyTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/product', product.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/product', product.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'product/'+ product.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

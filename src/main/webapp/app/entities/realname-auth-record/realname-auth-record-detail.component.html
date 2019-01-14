@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="realnameAuthRecord">
+            <h2><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.detail.title">Realname Auth Record</span> {{realnameAuthRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.userId">User Id</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.realName">Real Name</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.realName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.idCardNum">Id Card Num</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.idCardNum}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.idCardImgA">Id Card Img A</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.idCardImgA}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.idCardImgB">Id Card Img B</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.idCardImgB}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.authStatus">Auth Status</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.authStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.auditOpinion">Audit Opinion</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.auditOpinion}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.auditStaffName">Audit Staff Name</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.auditStaffName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.realnameAuthRecord.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{realnameAuthRecord.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/realname-auth-record', realnameAuthRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

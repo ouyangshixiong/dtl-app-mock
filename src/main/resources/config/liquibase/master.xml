@@ -5,6 +5,26 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065224_added_entity_Isp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065225_added_entity_BankcardInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065226_added_entity_EnterpriseInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065227_added_entity_EnterpriseAuthRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065228_added_entity_RealnameInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065229_added_entity_DTLUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065230_added_entity_UserLevel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065231_added_entity_UserRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065232_added_entity_RecommendRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065233_added_entity_SiteAuthRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065234_added_entity_Image.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065235_added_entity_Store.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065236_added_entity_Staff.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065237_added_entity_SiteInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065238_added_entity_RealnameAuthRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065239_added_entity_BankcardAuthRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065240_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065241_added_entity_StoreUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065242_added_entity_StoreAuthRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190114065243_added_entity_ProductRecord.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="dTLUser">
+            <h2><span jhiTranslate="dtlAppMockApp.dTLUser.detail.title">DTL User</span> {{dTLUser.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.userRoleId">User Role Id</span></dt>
+                <dd>
+                    <span>{{dTLUser.userRoleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.name">Name</span></dt>
+                <dd>
+                    <span>{{dTLUser.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.account">Account</span></dt>
+                <dd>
+                    <span>{{dTLUser.account}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.password">Password</span></dt>
+                <dd>
+                    <span>{{dTLUser.password}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.status">Status</span></dt>
+                <dd>
+                    <span>{{dTLUser.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.userType">User Type</span></dt>
+                <dd>
+                    <span>{{dTLUser.userType}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.userIdentity">User Identity</span></dt>
+                <dd>
+                    <span>{{dTLUser.userIdentity}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.source">Source</span></dt>
+                <dd>
+                    <span>{{dTLUser.source}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.ipAddr">Ip Addr</span></dt>
+                <dd>
+                    <span>{{dTLUser.ipAddr}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.regTime">Reg Time</span></dt>
+                <dd>
+                    <span>{{dTLUser.regTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.dTLUser.lastLoginTime">Last Login Time</span></dt>
+                <dd>
+                    <span>{{dTLUser.lastLoginTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/dtl-user', dTLUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

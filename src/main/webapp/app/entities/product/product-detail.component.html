@@ -1,0 +1,95 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="product">
+            <h2><span jhiTranslate="dtlAppMockApp.product.detail.title">Product</span> {{product.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dtlAppMockApp.product.txnId">Txn Id</span></dt>
+                <dd>
+                    <span>{{product.txnId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.title">Title</span></dt>
+                <dd>
+                    <span>{{product.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.categoryId">Category Id</span></dt>
+                <dd>
+                    <span>{{product.categoryId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.standardId">Standard Id</span></dt>
+                <dd>
+                    <span>{{product.standardId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.storeId">Store Id</span></dt>
+                <dd>
+                    <span>{{product.storeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.productImg">Product Img</span></dt>
+                <dd>
+                    <span>{{product.productImg}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.unitPrice">Unit Price</span></dt>
+                <dd>
+                    <span>{{product.unitPrice}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.amount">Amount</span></dt>
+                <dd>
+                    <span>{{product.amount}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.stock">Stock</span></dt>
+                <dd>
+                    <span>{{product.stock}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.minDeal">Min Deal</span></dt>
+                <dd>
+                    <span>{{product.minDeal}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.depotAddress">Depot Address</span></dt>
+                <dd>
+                    <span>{{product.depotAddress}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.contactName">Contact Name</span></dt>
+                <dd>
+                    <span>{{product.contactName}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.mobile">Mobile</span></dt>
+                <dd>
+                    <span>{{product.mobile}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.description">Description</span></dt>
+                <dd>
+                    <span>{{product.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.status">Status</span></dt>
+                <dd>
+                    <span>{{product.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.createBy">Create By</span></dt>
+                <dd>
+                    <span>{{product.createBy}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{product.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="dtlAppMockApp.product.lastModifyTime">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{product.lastModifyTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/product', product.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "dtlAppMockApp": {
+        "recommendRecord": {
+            "home": {
+                "title": "Recommend Records",
+                "createLabel": "创建新 Recommend Record",
+                "createOrEditLabel": "创建或编辑 Recommend Record"
+            },
+            "created": "Recommend Record {{ param }} 创建成功",
+            "updated": "Recommend Record {{ param }} 更新成功",
+            "deleted": "Recommend Record {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Recommend Record {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Recommend Record"
+            },
+            "recUserId": "Rec User Id",
+            "userId": "User Id",
+            "status": "Status",
+            "identityFlag": "Identity Flag",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "dtlAppMockApp": {
+        "realnameAuthRecord": {
+            "home": {
+                "title": "Realname Auth Records",
+                "createLabel": "Create a new Realname Auth Record",
+                "createOrEditLabel": "Create or edit a Realname Auth Record"
+            },
+            "created": "A new Realname Auth Record is created with identifier {{ param }}",
+            "updated": "A Realname Auth Record is updated with identifier {{ param }}",
+            "deleted": "A Realname Auth Record is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Realname Auth Record {{ id }}?"
+            },
+            "detail": {
+                "title": "Realname Auth Record"
+            },
+            "txnId": "Txn Id",
+            "userId": "User Id",
+            "realName": "Real Name",
+            "idCardNum": "Id Card Num",
+            "idCardImgA": "Id Card Img A",
+            "idCardImgB": "Id Card Img B",
+            "authStatus": "Auth Status",
+            "auditOpinion": "Audit Opinion",
+            "auditStaffName": "Audit Staff Name",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

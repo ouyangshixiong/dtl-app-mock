@@ -1,0 +1,39 @@
+{
+    "dtlAppMockApp": {
+        "productRecord": {
+            "home": {
+                "title": "Product Records",
+                "createLabel": "Create a new Product Record",
+                "createOrEditLabel": "Create or edit a Product Record"
+            },
+            "created": "A new Product Record is created with identifier {{ param }}",
+            "updated": "A Product Record is updated with identifier {{ param }}",
+            "deleted": "A Product Record is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product Record {{ id }}?"
+            },
+            "detail": {
+                "title": "Product Record"
+            },
+            "txnId": "Txn Id",
+            "title": "Title",
+            "categoryId": "Category Id",
+            "standardId": "Standard Id",
+            "storeId": "Store Id",
+            "productImg": "Product Img",
+            "unitPrice": "Unit Price",
+            "stock": "Stock",
+            "minDeal": "Min Deal",
+            "depotAddress": "Depot Address",
+            "contactName": "Contact Name",
+            "mobile": "Mobile",
+            "description": "Description",
+            "status": "Status",
+            "objection": "Objection",
+            "recordName": "Record Name",
+            "createBy": "Create By",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

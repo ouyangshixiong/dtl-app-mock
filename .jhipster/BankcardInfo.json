@@ -1,0 +1,48 @@
+{
+    "name": "BankcardInfo",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "bankName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankAccountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankCardNum",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankCardImgId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifyTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190114065225",
+    "javadoc": "银行卡认证信息表",
+    "entityTableName": "bankcard_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

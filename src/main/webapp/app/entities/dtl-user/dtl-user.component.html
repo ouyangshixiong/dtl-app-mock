@@ -1,0 +1,74 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dtlAppMockApp.dTLUser.home.title">DTL Users</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-dtl-user" [routerLink]="['/dtl-user/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dtlAppMockApp.dTLUser.home.createLabel">
+            Create new DTL User
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="dTLUsers">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="userRoleId"><span jhiTranslate="dtlAppMockApp.dTLUser.userRoleId">User Role Id</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="name"><span jhiTranslate="dtlAppMockApp.dTLUser.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="account"><span jhiTranslate="dtlAppMockApp.dTLUser.account">Account</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="password"><span jhiTranslate="dtlAppMockApp.dTLUser.password">Password</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="status"><span jhiTranslate="dtlAppMockApp.dTLUser.status">Status</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="userType"><span jhiTranslate="dtlAppMockApp.dTLUser.userType">User Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="userIdentity"><span jhiTranslate="dtlAppMockApp.dTLUser.userIdentity">User Identity</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="source"><span jhiTranslate="dtlAppMockApp.dTLUser.source">Source</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="ipAddr"><span jhiTranslate="dtlAppMockApp.dTLUser.ipAddr">Ip Addr</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="regTime"><span jhiTranslate="dtlAppMockApp.dTLUser.regTime">Reg Time</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="lastLoginTime"><span jhiTranslate="dtlAppMockApp.dTLUser.lastLoginTime">Last Login Time</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let dTLUser of dTLUsers ;trackBy: trackId">
+                <td><a [routerLink]="['/dtl-user', dTLUser.id, 'view' ]">{{dTLUser.id}}</a></td>
+                <td>{{dTLUser.userRoleId}}</td>
+                <td>{{dTLUser.name}}</td>
+                <td>{{dTLUser.account}}</td>
+                <td>{{dTLUser.password}}</td>
+                <td>{{dTLUser.status}}</td>
+                <td>{{dTLUser.userType}}</td>
+                <td>{{dTLUser.userIdentity}}</td>
+                <td>{{dTLUser.source}}</td>
+                <td>{{dTLUser.ipAddr}}</td>
+                <td>{{dTLUser.regTime | date:'medium'}}</td>
+                <td>{{dTLUser.lastLoginTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/dtl-user', dTLUser.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/dtl-user', dTLUser.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'dtl-user/'+ dTLUser.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

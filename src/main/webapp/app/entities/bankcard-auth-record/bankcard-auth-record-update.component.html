@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-bankcard-auth-record-heading" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.home.createOrEditLabel">Create or edit a Bankcard Auth Record</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!bankcardAuthRecord.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="bankcardAuthRecord.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.txnId" for="field_txnId">Txn Id</label>
+                    <input type="text" class="form-control" name="txnId" id="field_txnId"
+                        [(ngModel)]="bankcardAuthRecord.txnId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.userId" for="field_userId">User Id</label>
+                    <input type="number" class="form-control" name="userId" id="field_userId"
+                        [(ngModel)]="bankcardAuthRecord.userId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankName" for="field_bankName">Bank Name</label>
+                    <input type="text" class="form-control" name="bankName" id="field_bankName"
+                        [(ngModel)]="bankcardAuthRecord.bankName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankAccountName" for="field_bankAccountName">Bank Account Name</label>
+                    <input type="text" class="form-control" name="bankAccountName" id="field_bankAccountName"
+                        [(ngModel)]="bankcardAuthRecord.bankAccountName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankCardNum" for="field_bankCardNum">Bank Card Num</label>
+                    <input type="text" class="form-control" name="bankCardNum" id="field_bankCardNum"
+                        [(ngModel)]="bankcardAuthRecord.bankCardNum" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.bankCardImgId" for="field_bankCardImgId">Bank Card Img Id</label>
+                    <input type="number" class="form-control" name="bankCardImgId" id="field_bankCardImgId"
+                        [(ngModel)]="bankcardAuthRecord.bankCardImgId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.authStatus" for="field_authStatus">Auth Status</label>
+                    <input type="number" class="form-control" name="authStatus" id="field_authStatus"
+                        [(ngModel)]="bankcardAuthRecord.authStatus" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.auditOpinion" for="field_auditOpinion">Audit Opinion</label>
+                    <input type="text" class="form-control" name="auditOpinion" id="field_auditOpinion"
+                        [(ngModel)]="bankcardAuthRecord.auditOpinion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.auditStaffName" for="field_auditStaffName">Audit Staff Name</label>
+                    <input type="text" class="form-control" name="auditStaffName" id="field_auditStaffName"
+                        [(ngModel)]="bankcardAuthRecord.auditStaffName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="createTime"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dtlAppMockApp.bankcardAuthRecord.lastModifyTime" for="field_lastModifyTime">Last Modify Time</label>
+                    <div class="d-flex">
+                        <input id="field_lastModifyTime" type="datetime-local" class="form-control" name="lastModifyTime" [(ngModel)]="lastModifyTime"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

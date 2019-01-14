@@ -1,0 +1,26 @@
+{
+    "dtlAppMockApp": {
+        "staff": {
+            "home": {
+                "title": "Staff",
+                "createLabel": "创建新 Staff",
+                "createOrEditLabel": "创建或编辑 Staff"
+            },
+            "created": "Staff {{ param }} 创建成功",
+            "updated": "Staff {{ param }} 更新成功",
+            "deleted": "Staff {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Staff {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Staff"
+            },
+            "staffName": "Staff Name",
+            "password": "Password",
+            "realName": "Real Name",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}

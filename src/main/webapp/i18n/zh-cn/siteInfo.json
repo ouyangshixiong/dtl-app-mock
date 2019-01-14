@@ -1,0 +1,27 @@
+{
+    "dtlAppMockApp": {
+        "siteInfo": {
+            "home": {
+                "title": "Site Infos",
+                "createLabel": "创建新 Site Info",
+                "createOrEditLabel": "创建或编辑 Site Info"
+            },
+            "created": "Site Info {{ param }} 创建成功",
+            "updated": "Site Info {{ param }} 更新成功",
+            "deleted": "Site Info {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Site Info {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Site Info"
+            },
+            "userId": "User Id",
+            "siteType": "Site Type",
+            "address": "Address",
+            "siteImgIds": "Site Img Ids",
+            "status": "Status",
+            "createTime": "Create Time",
+            "lastModifyTime": "Last Modify Time"
+        }
+    }
+}
