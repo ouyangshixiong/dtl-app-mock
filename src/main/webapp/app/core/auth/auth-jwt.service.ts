@@ -29,6 +29,11 @@ export class AuthServerProvider {
                 this.storeAuthenticationToken(jwt, credentials.rememberMe);
                 return jwt;
             }
+            //const accessToken = resp.headers.get('access_token');
+            //if (accessToken) {
+            //    this.storeAuthenticationToken(accessToken, credentials.rememberMe);
+            //    return jwt;
+            //}
         }
     }
 

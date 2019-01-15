@@ -43,6 +43,10 @@ public class JWTFilter extends GenericFilterBean {
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
             return bearerToken.substring(7);
         }
+//        String accessToken = request.getHeader(AUTHORIZATION_HEADER);
+//        if (StringUtils.hasText(accessToken)) {
+//            return accessToken;
+//        }
         return null;
     }
 }
